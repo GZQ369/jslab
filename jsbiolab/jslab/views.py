@@ -1,9 +1,10 @@
-from django.shortcuts import render
+# encoding='utf-8'
 from django.http import HttpResponse
 from jsbiolab import settings
 from .models import Article,Pphoto
 from django.template.loader import get_template
 from datetime import datetime
+from django.shortcuts import redirect
 
 # Create your views here.
 def index(request):
@@ -52,9 +53,20 @@ def connect(request):
 def homepage(request):
     article = Article.objects.all()
     article_list=list()
-    for i,j in enumerate(article,1):
+    for i,j in enumerate(article):
         article_list.append("No.{}:".format(str(i))+str(j)+"<hr>")
         article_list.append("<small>"+str(j.content)+"</small><br><br>")
 
         #print(j.content.encode('utf-8'))
     return HttpResponse(article_list)
+
+def detail(request,title):
+    template = get_template('detail.html')
+    now      = datetime.now()
+    try:
+        art      = Article.objects.get(title=title)
+        if art !=None:
+            html     = template.render(locals())
+            return HttpResponse(html)
+    except:
+        return redirect

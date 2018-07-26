@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE HTML>
+
+<html>
+<!--<html><head></head><body></body></html>-->
+{% include "base.html" %}
+<body>
+			<div id="webBanner" class="webBanner">
+				<table class="bannerTable" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="bannerLeft"></td>
+						<td class="bannerCenter" align='center' valign='top'>
+							<div class='bannerTop'></div>
+
+							<meta name="viewport" content="width=device-width, initial-scale=1">
+							<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+							<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+							<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+							<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<!-- <div id='banner' class='banner extBanner' style='background:url(//13556616.s21i.faiusr.com/4/ABUIABAEGAAg8onxzAUo_oKpmgQw1go4-AM.png) 100% 100% no-repeat;height:508px'  normalheight='508' defaultwidth='0'>
+<div class='banner defaultBannerMain' style='background:url(//13556616.s21i.faiusr.com/4/ABUIABAEGAAg8onxzAUo_oKpmgQw1go4-AM.png) 50% 50% no-repeat;height:508px'></div>
+<div class='defaultBannerEdge defaultBannerEdgeRight'></div>
+<div class='defaultBannerEdge defaultBannerEdgeLeft'></div>
+</div> -->
+<style>
+.center
+		{
+			text-align:center;
+		}
+	
+/* Make the image fully responsive */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+</style>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- 指示符 -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+<!-- 轮播图片 -->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+	<img src="http://13556616.s21i.faiusr.com/4/ABUIABAEGAAg8onxzAUo_oKpmgQw1go4-AM.png">
+  </div>
+  <div class="carousel-item">
+	<img src="http://10342229.s61i.faiusr.com/2/AD0I1Z73BBACGAAgpKufvgUo1N_7mwcwgA849AM.jpg">
+  </div>
+  <div class="carousel-item">
+	<img src="http://10342229.s61i.faiusr.com/2/AD0I1Z73BBACGAAgqKufvgUousDJmQEwgA849AM.jpg">
+  </div>
+</div>
+
+<!-- 左右切换按钮 -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+
+</div>
+						</td>
+						<td class="bannerRight"></td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class="absMiddleTable" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center">
+			<div id="absForms" class="forms sideForms absForms">
+				<div id='module425' bannerTitle='文本' _indexClass='formIndex1' _moduleType='1' _modulestyle='86' _moduleid='425'  class='form form425 formIndex1 formStyle86 siteEditor ' title='' _sys='0' _banId='' style='position:absolute;top:2688px;left:22px;width:993px;' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _inpopupzone='0' _autoHeight='0' _global='false' _independent='false' data-scrollbar='0'>
+<div class='lightModuleOuterContent lightModuleOuterContent425'><div class='fk-editor simpleText   '><span style="font-size: 16px;">合作企业：</span><span style="color: rgb(26, 107, 230); font-family: 宋体; font-size: 14.6667px; line-height: 26.6667px;"><a href="http://www.jsocean.com/" _ltype="103" _lide="AGcI/////w8SF2h0dHA6Ly93d3cuanNvY2Vhbi5jb20v" target="_blank">江苏省海洋水产研究所</a> 中国科学院海洋研究所 启东市金海岸水产研究所 启东市黄海滩涂开发有限公司</span></div></div>
+</div>
+
+
+		
+	
+<div>
+	
+		
+
+		
+	<h2 class="center">{{art.title}}</h2>
+	<h5 class="center">{{art.time}}</h5>
+	<hr>
+
+	<hr>
+			<p style='font-family: 微软雅黑;font-size: 16pt; letter-spacing: 2pt;'>
+				{{art.content |linebreaksbr}}
+			</p>
+	
+
+</div>	
+
+
+
+
+
+	<h3><a href="/">回到首页</h3>
+
+<hr>
+		<h2>现在是北京时间
+			
+			{{now}}
+		
+		</h2>
+</body>
+
+<!-- {% include "foot.html" %} -->
+
+                          	
+
+
+</html>>

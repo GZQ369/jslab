@@ -109,7 +109,7 @@
 <td class='formMiddleCenter formMiddleCenter376 ' valign='top'>
 <div class='formMiddleContent formMiddleContent376 fk-formContentOtherPadding' tabStyle='0'>
 <div>
-<div class='newsList J_newsList  newsNewModuleStyle_two  useOldStyleForHeight' id='newsList376' _showSetting=0 newsListType='4' scroll='0'>
+<!-- <div class='newsList J_newsList  newsNewModuleStyle_two  useOldStyleForHeight' id='newsList376' _showSetting=0 newsListType='4' scroll='0'>
 <div topClassName='top2' topSwitch='off' newsId='37' newsName='盐碱地水产养殖水质' class='J_newsListLine line g_item   topFlagLine fk-newsLineHeight  J_nHover  top_with_line_icon'><div class='J_newsCalendar newsCalendar fk-newsCalendar-mdy'>
 <div class='fk-newsListDate fk-newsListDate-part1' id='verticalStyleMonthandDay'>05/02</div><div class='fk-newsListDate fk-newsListDate-part2' id='verticalStyleYear'>2018</div><a class='fk-newsCalendar-link' hidefocus='true' href="nd.jsp?id=37#_np=104_376" target=_blank></a>
 </div>
@@ -183,7 +183,43 @@
 <div class='clearfloat'></div>
 </div>
 </div></div>
-</td>
+</td> -->
+
+	
+<div>
+	
+	{% for i in art %}
+	<hr>
+		<p >
+				<a href="/detail/{{i.title}}" style='font-family: 微软雅黑;font-size: 20pt; font-weight: bold;'>
+					{{i.title}}
+				</a>
+		</p>
+		
+		<p style='font-family: 微软雅黑;font-size: 10pt; font-weight: bold;'>
+			
+			{{i.time}}
+		</p>
+		<p style='font-family:宋体;font-size: 16pt; letter-spacing: 1pt;'>
+				{{  i.content  |truncatechars:90}}
+		</p>
+	<hr>
+		{%    endfor   %}
+	
+</div>	
+		
+		
+		
+		<h2>现在是北京时间
+			
+			{{now}}
+		
+		</h2>
+
+
+
+
+
 <td class='formMiddleRight formMiddleRight376'></td>
 </tr></table>
 <table class='formBottom formBottom376' cellpadding='0' cellspacing='0'><tr><td class='left left376'></td><td class='center center376'></td><td class='right right376'></td></tr></table>
