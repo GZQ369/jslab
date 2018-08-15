@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+
+{% include "base.html" %}
+<form method="post" action="/userInfor/">
+	{% csrf_token %}
+	<p>姓名<input type="text" name="username"></p>
+    <p>性别<input type="text" name="sex"></p>
+    <p>邮箱<input type="text" name="email"></p>
+	<button type="submit" id="submit" >提交</button>
+</form>
+
+</body>
+
+</html>
+
+{% include "foot.html" %}

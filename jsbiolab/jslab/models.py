@@ -19,5 +19,13 @@ class Pphoto(models.Model):
     description = models.CharField(max_length=20 ,null= 'True', default = '添加对图片的描述')
     url = models.URLField(default="http://i.imgur.com/Z230eeq.png")
 
-    def __unicode__(self):
+    def __str__(self):  #让列表中文显示
         return self.description
+
+
+class userInfor(models.Model):
+     
+    username=models.CharField(max_length=64)
+    sex=models.CharField(max_length=64)
+    email=models.CharField(max_length=64)
+    address = models.CharField(max_length=128)

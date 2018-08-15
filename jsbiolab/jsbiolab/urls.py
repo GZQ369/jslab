@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from jslab.views import homepage,index,index2,index3,news,services,connect,detail
+from jslab.views import homepage,index,index2,index3,news,services,connect,detail,userInform
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^services$',services),
     url(r'^connect$',connect),
     url(r'^detail/(.+)$',detail),
+    url(r'^userInfor/$',userInform),
+
 ]

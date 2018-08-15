@@ -1,7 +1,7 @@
 # encoding='utf-8'
 from django.http import HttpResponse
 from jsbiolab import settings
-from .models import Article,Pphoto
+from .models import Article,Pphoto,userInfor
 from django.template.loader import get_template
 from datetime import datetime
 from django.shortcuts import redirect
@@ -70,3 +70,21 @@ def detail(request,title):
             return HttpResponse(html)
     except:
         return redirect
+
+def userInform(request):
+    if request.method=="POST":
+        u=request.POST.get("username",None)
+        s=request.POST.get("sex",None)
+        e=request.POST.get("email",None)
+        print(u,s,e)
+        if u=="www":
+            userinfo=userInfor()
+            userinfo.username=u
+            userinfo.sex=s
+            userinfo.email=e
+            userinfo.save()
+        
+            return  HttpResponse("上传ok,请截图牢记您的查询号:%s"%s)
+    else:
+        return HttpResponse("您的数据格式不正确")
+

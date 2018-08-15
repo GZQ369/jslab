@@ -14,5 +14,10 @@ class Articleadmin(admin.ModelAdmin):
 
 class Pphotoadmin(admin.ModelAdmin):
     list_display = ('description','url')
+
+class userInforadmin(admin.ModelAdmin):
+    list_display = ('username','email','sex')    #在详情页展示信息的list列表信息
+
 admin.site.register(models.Article, Articleadmin)
 admin.site.register(models.Pphoto,Pphotoadmin)
+admin.site.register(models.userInfor,userInforadmin)

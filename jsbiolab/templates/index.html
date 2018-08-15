@@ -24,10 +24,12 @@
 									<div class='bannerTop'></div>
 
 									<meta name="viewport" content="width=device-width, initial-scale=1">
+									<!-- 新 Bootstrap 核心 CSS 文件 -->  
 									<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
-									<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-									<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
-									<script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+									  
+									<!-- 可选的Bootstrap主题文件（一般不用引入） -->  
+									<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">  
+  
 <!-- <div id='banner' class='banner extBanner' style='background:url(//13556616.s21i.faiusr.com/4/ABUIABAEGAAg8onxzAUo_oKpmgQw1go4-AM.png) 100% 100% no-repeat;height:508px'  normalheight='508' defaultwidth='0'>
 	<div class='banner defaultBannerMain' style='background:url(//13556616.s21i.faiusr.com/4/ABUIABAEGAAg8onxzAUo_oKpmgQw1go4-AM.png) 50% 50% no-repeat;height:508px'></div>
 	<div class='defaultBannerEdge defaultBannerEdgeRight'></div>
@@ -84,9 +86,7 @@
 			<tr>
 				<td align="center">
 					<div id="absForms" class="forms sideForms absForms">
-						<div id='module425' bannerTitle='文本' _indexClass='formIndex1' _moduleType='1' _modulestyle='86' _moduleid='425'  class='form form425 formIndex1 formStyle86 siteEditor ' title='' _sys='0' _banId='' style='position:absolute;top:2688px;left:22px;width:993px;' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _inpopupzone='0' _autoHeight='0' _global='false' _independent='false' data-scrollbar='0'>
-<div class='lightModuleOuterContent lightModuleOuterContent425'><div class='fk-editor simpleText   '><span style="font-size: 16px;">合作企业：</span><span style="color: rgb(26, 107, 230); font-family: 宋体; font-size: 14.6667px; line-height: 26.6667px;"><a href="http://www.jsocean.com/" _ltype="103" _lide="AGcI/////w8SF2h0dHA6Ly93d3cuanNvY2Vhbi5jb20v" target="_blank">江苏省海洋水产研究所</a> 中国科学院海洋研究所 启东市金海岸水产研究所 启东市黄海滩涂开发有限公司</span></div></div>
-</div>
+						
 
 
 					</div>
@@ -1092,7 +1092,7 @@ Site.setFullMeasureBgHightInIe6( 365);;$(function(){Site.inFullmeasueAnimation.a
 	
 	
 
-});
+
 
 function afterModuleLoaded() {
 	
@@ -1292,100 +1292,54 @@ $(window).load(function(){
 
 });
 
-// 错误上报
-// (function(){
-// 	var _jsErrCahche = [];
-// 	var cacheOnError = window.onerror;
-// 	window.onerror = function(sMsg,sUrl,sLine){
-// 		if (typeof Site == 'undefined') {
-// 			alert('您的网页未加载完成，请尝试按“CTRL+功能键F5”重新加载。');
-// 		}
-// 		if( sLine < 1 || typeof sMsg != 'string' || sMsg.length < 1 ){
-// 			return;
-// 		}
-		
-// 		var log = "Error:" + sMsg + ";Line:" + sLine + ";Url:" + sUrl;
-// 		var alertLog = "Error:"+sMsg+"\n" + "Line:" + sLine + "\n" + "Url:" + sUrl + "\n";
-// 		var encodeUrl = function (url){
-// 			return typeof url === "undefined" ? "" : encodeURIComponent(url);
-// 		};
-		
-// 		var ajax = true;
-// 		var obj = { 'm' : sMsg, 'u' : sUrl, 'l' : sLine };
-// 		for( var i = 0; i < _jsErrCahche.length; i ++ ){
-// 			if( _jsErrCahche[i].m == obj.m && _jsErrCahche[i].u == obj.u && _jsErrCahche[i].l == obj.l  ){
-// 				ajax = false;
-// 				break;
-// 			}
-// 		}
-		
-// 		if( ajax ){
-// 			_jsErrCahche.push( obj );
-// 			_faiAjax.ajax({
-// 				type	: "post",
-// 				url		: "ajax/logJsErr_h.jsp?cmd=jsErr",
-// 				data	: 'msg='+ encodeUrl(log)
-// 			});
-// 		}
-// 		if(Fai.top._devMode){
-// 			alert( alertLog );
-// 		}
-// 		if(typeof cacheOnError == "function"){
-// 			cacheOnError(sMsg,sUrl,sLine);
-// 		}
-// 	};
-// })();
-
-// <!-- 
-
-// 	Site.beforeUnloadFunc();
-
-
-
-
-// // 在线视频模块
-
-// 	Site.loadCss("//2.ss.faisys.com/css/comm/video.js/video-js.min.css?v=201801161729");
-// 	Site.loadCss("//2.ss.faisys.com/css/video.min.css?v=201711250202");
-// 	// $LAB.script("//0.ss.faisys.com/error_js_video_ie8_js");
-// 	$LAB.script("//1.ss.faisys.com/js/comm/video.js/video.min.js?v=201805021844"); -->
-
-
-// //日历控件新样式，by jser 2017-10-7
-// Site.loadCss("//2.ss.faisys.com/css/datepicker.min.css?v=201806041903");
-
-	
-
-// 	$LAB.script("//1.ss.faisys.com/js/bookingSubmitPanel.min.js?v=201807021153");
-// 	$LAB.script("//1.ss.faisys.com/js/photoSlide.min.js?v=201806191702");
-// 	$LAB.script("//1.ss.faisys.com/js/imageEffect.min.js?v=201806151520")
-// 		.wait(function () {
-// 			jzUtils.trigger({
-// 				"name": "ImageEffect.FUNC.BASIC.Init",
-// 				"base":Site
-// 			});
-// 		});
-		
-
-
-
-// 	$LAB.script("//1.ss.faisys.com/js/faiFloatPanel.min.js?v=201806041139")
-// 		.script("//1.ss.faisys.com/js/faiFloatPanel_bindEvent.min.js?v=201803121303")
-		
-// 		.wait(function(){
-// 			Site.loadCss("//2.ss.faisys.com/css/faiFloatPanel.min.css?v=201711081430", function(){
-
-				
-					
-// 			});
-// 		});
-	
-
-
 	
 	
 	
 // </script>
+<form style="text-align: center;" method="post" action="/userInfor/" autocomplete="on">
+	{% csrf_token %}
+	<div id="legend" class="">
+        <legend class="" style="font-size: 35px;background-color: rgb(79, 129, 189);">海洋所中心实验室检测表</legend>
+	  </div>
+	  <ul>
+		<p style="margin-left:10%"> 样品编号&nbsp; <input type="text" name="number"><span> (请工作人员发放样品编号)</span></p>
+		<p> 抽样/送样人姓名 &nbsp;<input type="text" name="username"></p>
+		<p>地址    &nbsp; &nbsp;<input type="text" name="address"></p>
+		<p>送样/抽样日期    &nbsp; &nbsp;<input type="text" placeholder="2018-08-10" name="receive_time"></p>
+		<p>手机    &nbsp; &nbsp;<input type="text" name="phone"></p>
+		<p>微信号    &nbsp; &nbsp;<input type="text" name="wechat"></p>
+		<p>检测类型 &nbsp; &nbsp;<select name="detection_type"><option>委托检测</option><option>抽样检测</option></select>(若为委托检测，请直接到最下方选择检测项目)</p>
+		<p>被抽样单位    &nbsp; &nbsp;<input type="text" name="company"></p>
+		<p>仔虾进场时间   &nbsp; &nbsp;<input type="text" placeholder="2018-08-10" name="start_time"></p>
+		<p>抽样池号    &nbsp; &nbsp;<input type="text" placeholder="例如：A车间8" name="pood_number"><span class="add-on">号</span></p>
+		<p> 同批苗种布池数   &nbsp; &nbsp;<input type="text" placeholder="例如：A车间（6～12）" name="pond_count"></p>
+		<p>虾苗品牌    &nbsp; &nbsp;<input type="text" name="brand"></p>
+		<p>仔虾来源种虾场    &nbsp; &nbsp;<input type="text" name="source"></p>
+		<p>同批仔虾进苗量(万尾)&nbsp; &nbsp;<input type="number" name="shrimp"><span class="add-on">万尾</span></p>
+		<p>样品池水盐度(‰)&nbsp; &nbsp;<input type="number" name="salt"><span class="add-on">‰</span></p>
+		<p>样品池水温度(℃)&nbsp; &nbsp;<input type="number" name="temperature"><span class="add-on">℃</span></p>
+		<p  style="color:red;font-size:19px">检测项目 &nbsp; &nbsp;<input type="checkbox" value="白斑综合征病毒(WSSV)[-1]" name="wssv">
+			1.白斑综合征病毒(WSSV)
+			<input type="checkbox" value="传染性皮下及造血组织坏死病毒(IHHNV)[-]" name="IHHNV">
+			2.传染性皮下及造血组织坏死病毒(IHHNV)
+			<input type="checkbox" value="急性肝胰腺坏死症弧菌(Vibrio-EMS)[-]" name="ems">
+			  3.急性肝胰腺坏死症弧菌（Vibrio-EMS）
+			  <input type="checkbox" value="肠肝胞虫(EHP)[-]"  name="EHP">
+	  			4.肠肝胞虫(EHP)</p>
+		
+		<p>检测目的 &nbsp; &nbsp;<select name="purpose"><option>定性</option><option>定量</option></select></p>
+		<p>是否出具报告 &nbsp; &nbsp;<select name="is_put"><option>是</option><option>否</option></select></p>
+		<p>收费金额&nbsp; &nbsp;<input type="text" name="money"><span class="add-on">元</span></p>
+		<p>请工作人员填写检测密钥    &nbsp; &nbsp;<input type="text" name="password"></p>
+		<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+		<button type="submit" id="submit" >提交</button>
+	</ul>
+</form>
+
+
+    
+
+
 
 </body>
 
